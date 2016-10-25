@@ -1,5 +1,7 @@
 <?php
-include_once("settings.php");
+include 'settings.php';
+$base = 'appGFseBpeMuidZqL';
+$table = 'survey';
 $airtable_url = 'https://api.airtable.com/v0/' . $base . '/' . $table;
 $url = 'https://api.airtable.com/v0/' . $base . '/' . $table . '?maxRecords=10&view=Main%20View';
 $headers = array(
@@ -103,6 +105,7 @@ $labels = trim($labels, ",");
         </div>
         <div class="row">
             <div class="col m8 offset-m2 s12">
+                <p>Here's what the corresponding Airtable looks like:</p>
                 <iframe class="airtable-embed" frameborder="0" height="533"
                 onmousewheel="" src=
                 "https://airtable.com/embed/shrpbS4Cvnqi79gsC?backgroundColor=purple"
